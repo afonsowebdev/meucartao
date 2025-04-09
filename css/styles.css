@@ -61,8 +61,7 @@ html {
 }
 
 body {
-    background-color: var(--color-btn);
-    /* background-image: var(--background-image); */
+    background-image: url('/image/image-background.png');
     background-position: var(--background-position);
     background-size: var(--background-size);
     background-repeat: var(--background-repeat);
