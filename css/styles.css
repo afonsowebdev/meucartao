@@ -1,0 +1,359 @@
+/* Import Font Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/image/image-background.jpg');
+    /* --background-image: url('/image/image-background.jpg'); */
+    --background-position: center;
+    --background-size: cover;
+    --background-repeat: no-repeat;
+    --background-attachment: fixed;
+    /* --opacity: 0.9; */
+    --backdrop-filter: blur(5px);
+
+    --font-family-title: 'Poppins', sans-serif;
+    --font-size-h1: 40px;
+    --font-size-p: 16px;
+
+    --font-weight-h1: 700;
+    --font-weight-p: 400;
+
+    --text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --text-shadow-hover: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    --box-shadow: 0 4px 10px rgba(255, 255, 255, 0.505);
+    --box-shadow-hover: 0 8px 10px rgba(255, 255, 255, 0.5);
+
+    --background-color: #ffffff;
+    --bacground-color-card-header: #416EEF;
+
+    --background-color-button: #ffffff;
+    --background-color-button-hover: #f0f0f0;
+    --box-shadow-button: 0 4px 6px rgba(0, 0, 0, 0.5);
+    --box-shadow-button-hover: 0 4px 6px rgba(255, 255, 255, 0.21);
+    --border-radious-button: 50px;
+
+    --width-img: 100px;
+    --height-img: 100px;
+    --border-radius: 50%;
+
+    --card-widht: 800px;
+    --card-height: 400px;
+
+    --color: #ffffff;
+    --color-btn: #000000;
+}
+
+@font-face {
+    font-family: 'font-title';
+    src: url(/fonts/font-title.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: var(--background-image);
+    background-position: var(--background-position);
+    background-size: var(--background-size);
+    background-repeat: var(--background-repeat);
+    background-attachment: var(--background-attachment);
+    /* opacity: var(--opacity); */
+    /* backdrop-filter: var(--backdrop-filter); */
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    margin: 0 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Card */
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: var(--card-widht);
+    height: var(--card-height);
+    /* background-color: var(--background-color); */
+    color: var(--color);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    backdrop-filter: var(--backdrop-filter);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.card-content {
+    width: 100%;
+    height: auto;
+}
+
+.card-content .card-iamge img {
+    width: var(--width-img);
+    height: var(--height-img);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.card-content .card-description {
+    font-size: var(--font-size-p);
+    text-shadow: var(--text-shadow);
+    font-weight: var(--font-weight-p);
+    color: var(--color);
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.card-content .card-title {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-h1);
+    text-shadow: var(--text-shadow);
+    color: var(--color);
+    margin-bottom: 10px;
+}
+
+.card-content .card-paragraph {
+    font-size: var(--font-size-p);
+    font-weight: var(--font-weight-p);
+    text-shadow: var(--text-shadow);
+    color: var(--color);
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+/* card-buttons */
+
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.card-buttons .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    margin: 0 5px;
+    padding: 0 10px;
+    background-color: var(--background-color-button);
+    color: var(--color-btn);
+    border-radius: var(--border-radious-button);
+    box-shadow: var(--box-shadow-button);
+    font-size: var(--font-size-p);
+    font-weight: var(--font-weight-p);
+    text-shadow: var(--text-shadow-hover);
+    transition: all 0.5s ease-in-out;
+}
+
+.card-buttons .btn:hover {
+    background-color: var(--background-color-button-hover);
+    box-shadow: var(--box-shadow-button-hover);
+    transform: translateY(-5px);
+}
+
+.btn i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+#LinkedIn/* :hover */ {
+    background: #0077B5;
+    color: var(--background-color);
+}
+#GitHub/* :hover */ {
+    background: #333333;
+    color: var(--background-color);
+}
+#Twitter/* :hover */ {
+    background: #1DA1F2;
+    color: var(--background-color);
+}
+#Instagram/* :hover */ {
+     background: #E1306C;
+    color: var(--background-color);
+}
+#Portifolio/* :hover */ {
+    background: #FF5722;
+    color: var(--background-color);
+}
+
+/* Breakpoints */
+
+/* Dispositivos muito pequenos (celulares em pé) */
+@media(min-width: 320px) and (max-width: 480px) {
+   
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        margin: 0 20px;
+    }
+
+    .card-buttons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-buttons .btn {
+        width: 100%;
+        height: 40px;
+        margin: 5px 0;
+        padding: 0 10px;
+    }
+  }
+  
+  /* Celulares médios e pequenos tablets (tipo Galaxy Fold ou iPhone Mini) */
+  @media (max-width: 600px) {
+    
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        margin: 0 20px;
+    }
+
+    .card-buttons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-buttons .btn {
+        width: 100%;
+        height: 40px;
+        margin: 5px 0;
+        padding: 0 10px;
+    }
+  }
+  
+  /* Tablets (modo retrato) */
+  @media (max-width: 768px) {
+   
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        margin: 0 20px;
+    }
+
+    .card-buttons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-buttons .btn {
+        width: 100%;
+        height: 40px;
+        margin: 5px 0;
+        padding: 0 10px;
+    }
+  }
+  
+  /* Tablets grandes e laptops pequenos */
+  @media (max-width: 992px) {
+    
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        margin: 0 20px;
+    }
+
+    .card-buttons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-buttons .btn {
+        width: 100%;
+        height: 40px;
+        margin: 5px 0;
+        padding: 0 10px;
+    }
+  }
+  
+  /* Laptops e desktops */
+  @media (max-width: 1200px) {
+ 
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        margin: 0 20px;
+    }
+
+    .card-buttons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-buttons .btn {
+        width: 100%;
+        height: 40px;
+        margin: 5px 0;
+        padding: 0 10px;
+    }
+  }
+  
+
