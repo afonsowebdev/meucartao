@@ -216,7 +216,7 @@ span {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: center;
+        /* text-align: center; */
     }
 
     .card {
@@ -228,7 +228,7 @@ span {
 
     .card-content .card-description {
         font-size: var(--font-size-description);
-        text-align: var(--text-align);
+        /* text-align: var(--text-align); */
     }
 
     .card-content .card-title {
@@ -237,7 +237,7 @@ span {
 
     .card-content .card-paragraph {
         font-size: var(--font-size-paragraph);
-        text-align: var(--text-align);
+        text-align: justify;
     }
 
     .card-buttons {
@@ -247,7 +247,7 @@ span {
     }
 
     .card-buttons .btn {
-        width: 100%;
+        width: 80%;
         height: 40px;
         margin: 5px 0;
         padding: 0 10px;
