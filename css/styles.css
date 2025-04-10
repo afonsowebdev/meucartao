@@ -65,7 +65,6 @@ body {
     background-position: var(--background-position);
     background-size: var(--background-size);
     background-repeat: var(--background-repeat);
-    /* opacity: var(--opacity); */
 }
 
 a {
