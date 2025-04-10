@@ -207,9 +207,6 @@ span {
         --font-size-paragraph: 12px;
         --font-size-description: 12px;
         --font-size-title: 20px;
-        --text-align: center;
-
-        
     }
    
     .container {
@@ -255,7 +252,12 @@ span {
   }
   
   /* Celulares médios e pequenos tablets (tipo Galaxy Fold ou iPhone Mini) */
-  @media (max-width: 640px) {
+  @media (max-width: 640px) and (max-width: 768px) {
+    :root {
+        --font-size-paragraph: 12px;
+        --font-size-description: 12px;
+        --font-size-title: 20px;
+    }
     
     .container {
         flex-direction: column;
@@ -266,8 +268,26 @@ span {
     .card {
         width: 80%;
         height: auto;
-        padding: 20px;
+        padding: 20px 20px;
         margin: 0 20px;
+    }
+
+    .card-content {
+        padding: 20px 20px;
+    }
+
+    .card-content .card-description {
+        font-size: var(--font-size-description);
+        /* text-align: var(--text-align); */
+    }
+
+    .card-content .card-title {
+        font-size: var(--font-size-title);
+    }
+
+    .card-content .card-paragraph {
+        font-size: var(--font-size-paragraph);
+        text-align: justify;
     }
 
     .card-buttons {
@@ -277,45 +297,18 @@ span {
     }
 
     .card-buttons .btn {
-        width: 100%;
+        width: 80%;
         height: 40px;
         margin: 5px 0;
         padding: 0 10px;
     }
+
+
   }
   
-  /* Tablets (modo retrato) */
-  @media (max-width: 768px) {
-   
-    .container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .card {
-        width: 80%;
-        height: auto;
-        padding: 20px;
-        margin: 0 20px;
-    }
-
-    .card-buttons {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .card-buttons .btn {
-        width: 100%;
-        height: 40px;
-        margin: 5px 0;
-        padding: 0 10px;
-    }
-  }
   
   /* Tablets grandes e laptops pequenos */
-  @media (max-width: 992px) {
+  /* @media (max-width: 992px) {
     
     .container {
         flex-direction: column;
@@ -342,10 +335,10 @@ span {
         margin: 5px 0;
         padding: 0 10px;
     }
-  }
+  } */
   
   /* Laptops e desktops */
-  @media (max-width: 1200px) {
+  /* @media (max-width: 1200px) {
  
     .container {
         flex-direction: column;
@@ -372,6 +365,6 @@ span {
         margin: 5px 0;
         padding: 0 10px;
     }
-  }
+  } */
   
 
