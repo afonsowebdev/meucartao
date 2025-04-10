@@ -244,7 +244,7 @@ span {
     }
 
     .card-buttons .btn {
-        width: 80%;
+        width: 100%;
         height: 40px;
         margin: 5px 0;
         padding: 0 10px;
@@ -297,7 +297,7 @@ span {
     }
 
     .card-buttons .btn {
-        width: 80%;
+        width: 100%;
         height: 40px;
         margin: 5px 0;
         padding: 0 10px;
