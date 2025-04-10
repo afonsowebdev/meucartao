@@ -3,12 +3,13 @@
 
 :root {
 
-    --background-image: url('image/image-background.png');
+    /* --background-image: url('image/image-background.png');
     --background-position: center;
     --background-size: cover;
     --background-repeat: no-repeat;
-    --background-attachment: fixed;
-    
+    --background-attachment: fixed; */
+    --bockground-color: #ffffff;
+
     --backdrop-filter: blur(5px);
 
     --font-family-title: 'Poppins', sans-serif;
@@ -40,7 +41,7 @@
     --card-widht: 800px;
     --card-height: 400px;
 
-    --color: #ffffff;
+    --color: #000000;
     --color-btn: #000000;
 }
 
@@ -61,10 +62,7 @@ html {
 }
 
 body {
-    background-image: var(--background-image);
-    background-position: var(--background-position);
-    background-size: var(--background-size);
-    background-repeat: var(--background-repeat);
+    background-color: var(--background-color);
 }
 
 a {
@@ -204,18 +202,42 @@ span {
 
 /* Dispositivos muito pequenos (celulares em pé) */
 @media(min-width: 320px) and (max-width: 480px) {
+
+    :root {
+        --font-size-paragraph: 12px;
+        --font-size-description: 12px;
+        --font-size-title: 20px;
+        --text-align: center;
+
+        
+    }
    
     .container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 
     .card {
         width: 80%;
         height: auto;
-        padding: 20px;
+        padding: 20px 20px;
         margin: 0 20px;
+    }
+
+    .card-content .card-description {
+        font-size: var(--font-size-description);
+        text-align: var(--text-align);
+    }
+
+    .card-content .card-title {
+        font-size: var(--font-size-title);
+    }
+
+    .card-content .card-paragraph {
+        font-size: var(--font-size-paragraph);
+        text-align: var(--text-align);
     }
 
     .card-buttons {
